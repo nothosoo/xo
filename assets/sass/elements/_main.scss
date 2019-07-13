@@ -1,0 +1,102 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: transparent;
+}
+
+//<----------Index page---------->
+.index-container{
+    z-index: 100;
+    position: relative;
+    height: 100vh;
+
+    .link-wrapper{
+        position: absolute;
+        top: 30%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    .text-wrapper{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .greetings{
+            font-size: 3rem;
+        }
+    
+        .name{
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+    }
+
+    .personal-links{
+        position: absolute;
+        bottom: 20%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+
+        .link{
+            color: $text-primary;
+            text-decoration: dotted;
+
+            &:not(:last-child){
+                margin-right: .5rem;
+            }
+        }
+    }
+}
+
+.page-container{
+    position: relative;
+    z-index: 100;
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+
+    .bio-text{
+        font-size: 1.5rem;
+        font-weight: 200;
+        width: 50%;
+        margin: auto;
+        text-align: left;
+        margin-bottom: 2rem;
+    }
+
+    .skills{
+
+        .skill-title{
+            margin-bottom: 2rem;
+        }
+
+        width: 50%;
+        margin: auto;
+        text-align: left;
+
+        .skill{
+            color: $text-primary;
+            margin-bottom: 1rem;
+
+            .skill-seperator{
+                color: $text-light;
+            }
+        }
+    }
+    
+    .contact-text{
+        margin-top: 4rem;
+    }
+
+    .email{
+        font-size: 2rem;
+        color: $text-primary;
+        text-decoration: none;
+    }
+}
