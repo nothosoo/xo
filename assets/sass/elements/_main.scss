@@ -16,9 +16,16 @@ body {
 
     .link-wrapper{
         position: absolute;
+        text-align: center;
         top: 30%;
         left: 50%;
         transform: translate(-50%, -50%);
+
+        .button{
+            &:not(:last-child){
+                margin-bottom: .5rem;
+            }
+        }
     }
 
     .text-wrapper{
@@ -79,6 +86,7 @@ body {
         width: 50%;
         margin: auto;
         text-align: left;
+        margin-bottom: 2rem;
 
         .skill{
             color: $text-primary;
@@ -98,5 +106,27 @@ body {
         font-size: 2rem;
         color: $text-primary;
         text-decoration: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    html{
+        font-size: 12px;
+    }
+
+    .page-container{
+        width: 80%;
+
+        .bio-text, .skills{
+            width: 70%;
+        }
+    }
+
+    .index-container{
+
+        // .link-wrapper{
+        //     left: 30%;
+        //     transform: translate(-20%, -50%);
+        // }
     }
 }
