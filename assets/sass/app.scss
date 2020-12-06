@@ -1,5 +1,34 @@
 @import 'variables';
-@import 'elements/main';
+// @import 'elements/main';
 @import 'elements/typography';
-@import 'elements/button';
-@import 'elements/animation';
+// @import 'elements/button';
+// @import 'elements/animation';
+
+body {
+	background-color: $bg-color;
+	padding: 5vh 10vw;
+	font-size: calc(10px + 0.33vw);
+}
+
+.container {
+	position: absolute;
+	max-width: 40rem;
+	padding: 1rem;
+}
+
+.link {
+	color: $text-primary;
+	text-decoration: none;
+	position: relative;
+	&::after {
+		content: '';
+		position: absolute;
+		z-index: -1;
+		top: 60%;
+		left: -0.1em;
+		right: -0.1em;
+		bottom: 0;
+		transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+		background-color: rgba($primary, 0.5);
+	}
+}
